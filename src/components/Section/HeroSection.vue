@@ -2,7 +2,7 @@
   <section class="hero">
     <div class="hero-bg">
       <img
-        src="https://images.unsplash.com/photo-1571283056653-e9802feac258?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src="https://cdn.pixabay.com/photo/2012/11/28/10/30/men-67636_1280.jpg"
         alt="Security Guard"
         class="bg-image"
       />

@@ -4,6 +4,7 @@ import StatsSection from '@/components/Section/StatsSection.vue'
 import ServicesSection from '@/components/Section/ServicesSection.vue'
 import AdvantageSection from '@/components/Section/AdvantageSection.vue'
 import TestimonialsSection from '@/components/Section/TestimonialsSection.vue'
+import CtaSection from '@/components/Section/CtaSection.vue'
 </script>
 
 <template>
@@ -13,5 +14,6 @@ import TestimonialsSection from '@/components/Section/TestimonialsSection.vue'
     <AdvantageSection />
     <ServicesSection />
     <TestimonialsSection />
+    <CtaSection />
   </div>
 </template>
