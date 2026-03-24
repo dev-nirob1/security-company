@@ -43,6 +43,8 @@
             <li><router-link to="/services">Executive Protection</router-link></li>
             <li><router-link to="/services">Asset Surveillance</router-link></li>
             <li><router-link to="/services">Risk Assessment</router-link></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
           </ul>
         </div>
       </div>
@@ -59,10 +61,9 @@
       <div class="container">
         <div class="bottom-content">
           <p>&copy; 2026 SecureCorp. All rights reserved.</p>
-          <div class="legal-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-          </div>
+          <p class="attribution">
+            Design & Developed by <a href="https://webpoka.com/" target="_blank" class="webpoka-link">webpoka</a>
+          </p>
         </div>
       </div>
     </div>
@@ -189,13 +190,18 @@
   font-size: 0.875rem;
 }
 
-.legal-links {
-  display: flex;
-  gap: 2rem;
+/* Legal links moved to nav column */
+
+.webpoka-link {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
 }
 
-.legal-links a:hover {
-  color: var(--primary);
+.webpoka-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }
 
 @media (max-width: 991px) {

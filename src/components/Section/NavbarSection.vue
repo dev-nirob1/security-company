@@ -8,14 +8,14 @@ let lastScrollY = 0
 
 const handleScroll = () => {
   const currentScrollY = window.scrollY
-  
+
   if (currentScrollY > lastScrollY && currentScrollY > 100) {
     isVisible.value = false
     isMenuOpen.value = false // Close menu on scroll
   } else {
     isVisible.value = true
   }
-  
+
   isScrolled.value = currentScrollY > 20
   lastScrollY = currentScrollY
 }
@@ -34,12 +34,12 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <nav 
-    class="navbar" 
-    :class="{ 
-      'hidden': !isVisible, 
-      'scrolled': isScrolled,
-      'menu-open': isMenuOpen
+  <nav
+    class="navbar"
+    :class="{
+      hidden: !isVisible,
+      scrolled: isScrolled,
+      'menu-open': isMenuOpen,
     }"
   >
     <div class="container nav-content">
@@ -54,11 +54,13 @@ onUnmounted(() => {
         <span class="bar"></span>
       </button>
 
-      <div class="nav-links" :class="{ 'active': isMenuOpen }">
+      <div class="nav-links" :class="{ active: isMenuOpen }">
         <router-link to="/" @click="isMenuOpen = false">Home</router-link>
         <router-link to="/services" @click="isMenuOpen = false">Services</router-link>
         <router-link to="/about" @click="isMenuOpen = false">About Us</router-link>
-        <router-link to="/contact" class="btn-tactical btn-nav" @click="isMenuOpen = false">Get Inquiry</router-link>
+        <router-link to="/contact" class="btn-tactical btn-nav" @click="isMenuOpen = false"
+          >Get Inquiry</router-link
+        >
       </div>
     </div>
   </nav>
@@ -168,25 +170,32 @@ onUnmounted(() => {
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: 0;
     width: 80%;
     max-width: 300px;
     height: 100vh;
     background: var(--bg-dark);
     flex-direction: column;
-    justify-content: center;
-    padding: 2rem;
+    justify-content: start;
+    padding: 6rem 2rem 2rem 2rem;
     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
   }
 
   .nav-links.active {
-    right: 0;
+    transform: translateX(0);
   }
 
-  .menu-open .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-  .menu-open .bar:nth-child(2) { opacity: 0; }
-  .menu-open .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  .menu-open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
 </style>

@@ -24,22 +24,22 @@
   padding: 8rem 0;
   overflow: hidden;
   /* Ultimate layering fix: Gradient + Image in one command */
-  background: 
+  background:
     linear-gradient(
-      135deg,
-      rgba(2, 6, 23, 0.9) 0%,
-      rgba(245, 158, 11, 0.1) 50%,
-      rgba(2, 6, 23, 0.9) 100%
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.7) 50%,
+      rgba(0, 0, 0, 0.5) 100%
     ),
     url('https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?q=80&w=2070&auto=format&fit=crop');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
 .content-wrapper {
   max-width: 700px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .badge {
@@ -117,8 +117,16 @@ p {
 }
 
 @media (max-width: 768px) {
-  .cta-section { padding: 5rem 0; }
-  .cta-actions { flex-direction: column; align-items: center; }
-  .btn { width: 100%; justify-content: center; }
+  .cta-section {
+    padding: 5rem 0;
+  }
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 </style>
