@@ -3,6 +3,7 @@ import HeroSection from '@/components/Section/HeroSection.vue'
 import StatsSection from '@/components/Section/StatsSection.vue'
 import ServicesSection from '@/components/Section/ServicesSection.vue'
 import AdvantageSection from '@/components/Section/AdvantageSection.vue'
+import TestimonialsSection from '@/components/Section/TestimonialsSection.vue'
 </script>
 
 <template>
@@ -11,5 +12,6 @@ import AdvantageSection from '@/components/Section/AdvantageSection.vue'
     <StatsSection />
     <AdvantageSection />
     <ServicesSection />
+    <TestimonialsSection />
   </div>
 </template>
