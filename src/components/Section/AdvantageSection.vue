@@ -1,5 +1,6 @@
 <script setup>
 import SectionHeader from '@/Widget/SectionHeader.vue'
+import AdvantageItem from '@/Widget/AdvantageItem.vue'
 
 const advantages = [
   {
@@ -28,15 +29,11 @@ const advantages = [
           <SectionHeader subtitle="Strategic Advantage" title="Why Elite Security?" />
 
           <div class="advantage-list">
-            <div v-for="item in advantages" :key="item.title" class="advantage-item">
-              <div class="icon-box">
-                <i :class="['fa-solid', item.icon]"></i>
-              </div>
-              <div class="text-box">
-                <h4>{{ item.title }}</h4>
-                <p>{{ item.desc }}</p>
-              </div>
-            </div>
+            <AdvantageItem 
+              v-for="item in advantages" 
+              :key="item.title" 
+              v-bind="item"
+            />
           </div>
         </div>
 
@@ -65,7 +62,6 @@ const advantages = [
 </template>
 
 <style scoped>
-/* ... existing styles ... */
 .advantage-section {
   background-color: var(--bg-dark);
   border-top: 1px solid var(--border);
@@ -82,40 +78,6 @@ const advantages = [
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-}
-
-.advantage-item {
-  display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
-}
-
-.icon-box {
-  flex-shrink: 0;
-  width: 50px;
-  height: 50px;
-  background: rgba(245, 158, 11, 0.1);
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  border: 1px solid rgba(245, 158, 11, 0.2);
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 75% 100%, 0 100%);
-}
-
-h4 {
-  font-size: 1.2rem;
-  color: #fff;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-}
-
-p {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 0;
 }
 
 .visual-side {

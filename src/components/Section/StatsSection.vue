@@ -1,19 +1,22 @@
+<script setup>
+import StatItem from '@/Widget/StatItem.vue'
+
+const stats = [
+  { number: '500+', label: 'Happy Clients' },
+  { number: '1000+', label: 'Professional Guards' },
+  { number: '10+', label: 'Years of Experience' }
+]
+</script>
+
 <template>
   <section class="stats-section">
     <div class="container">
       <div class="stats-grid">
-        <div class="stat-item">
-          <h2 class="stat-number">500+</h2>
-          <p class="stat-label">Happy Clients</p>
-        </div>
-        <div class="stat-item">
-          <h2 class="stat-number">1000+</h2>
-          <p class="stat-label">Professional Guards</p>
-        </div>
-        <div class="stat-item">
-          <h2 class="stat-number">10+</h2>
-          <p class="stat-label">Years of Experience</p>
-        </div>
+        <StatItem 
+          v-for="stat in stats" 
+          :key="stat.label" 
+          v-bind="stat"
+        />
       </div>
     </div>
   </section>
@@ -34,35 +37,10 @@
   text-align: center;
 }
 
-.stat-item {
-  padding: 1.5rem;
-}
-
-.stat-number {
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
-  font-weight: 800;
-  color: var(--primary);
-}
-
-.stat-label {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  font-weight: 500;
-  margin-bottom: 0;
-}
-
 @media (max-width: 768px) {
   .stats-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
-  }
-
-  .stat-item {
-    border-bottom: 1px solid var(--border);
-  }
-
-  .stat-item:last-child {
-    border-bottom: none;
   }
 }
 </style>
