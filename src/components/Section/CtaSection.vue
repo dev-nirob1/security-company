@@ -15,10 +15,10 @@
         <h2>Ready to Secure <span class="accent">Your Future?</span></h2>
         <p>Get a comprehensive security assessment from our elite team today.</p>
         <div class="cta-actions">
-          <router-link to="/contact" class="btn btn-primary">
+          <router-link to="/contact" class="btn-tactical">
             <i class="fa-solid fa-shield-halved"></i> Get a Free Quote
           </router-link>
-          <a href="tel:+1234567890" class="btn btn-outline">
+          <a href="tel:+1234567890" class="btn-tactical-outline">
             <i class="fa-solid fa-phone"></i> Call Us Now
           </a>
         </div>

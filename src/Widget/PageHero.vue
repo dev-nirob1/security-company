@@ -43,7 +43,6 @@ defineProps({
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding-top: 80px; /* Account for navbar */
   background: #000;
 }
 

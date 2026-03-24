@@ -22,8 +22,8 @@
         </p>
 
         <div class="hero-actions">
-          <router-link to="/services" class="btn btn-primary">Request Service</router-link>
-          <router-link to="/contact" class="btn btn-outline">Contact Us</router-link>
+          <router-link to="/services" class="btn-tactical">Request Service</router-link>
+          <router-link to="/contact" class="btn-tactical-outline">Contact Us</router-link>
         </div>
       </div>
     </div>

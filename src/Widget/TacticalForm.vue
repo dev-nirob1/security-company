@@ -72,7 +72,7 @@ const handleSubmit = () => {
           </div>
         </div>
 
-        <button type="submit" class="submit-btn" :disabled="isSubmitting">
+        <button type="submit" class="btn-tactical submit-btn" :disabled="isSubmitting">
           <span v-if="!isSubmitting">ESTABLISH CONNECTION</span>
           <span v-else class="loading-dots">ESTABLISHING...</span>
         </button>
@@ -85,7 +85,7 @@ const handleSubmit = () => {
       </div>
       <h3>Transmission Successful</h3>
       <p>Your intelligence has been received. Our tactical team will contact you shortly via secure channel.</p>
-      <button @click="isSubmitted = false" class="btn-reset">NEW TRANSMISSION</button>
+      <button @click="isSubmitted = false" class="btn-tactical-outline">NEW TRANSMISSION</button>
     </div>
   </div>
 </template>
