@@ -28,44 +28,44 @@ const handleSubmit = () => {
       <form @submit.prevent="handleSubmit" class="tactical-form">
         <div class="form-header">
           <div class="header-line"></div>
-          <span>SECURE CHANNEL OPEN</span>
+          <span>SEND US A MESSAGE</span>
         </div>
 
         <div class="form-grid">
           <div class="input-group">
-            <label>IDENTIFIER</label>
+            <label>FULL NAME</label>
             <input 
               v-model="form.name" 
               type="text" 
-              placeholder="Your Full Name" 
+              placeholder="Enter your name" 
               required 
             />
           </div>
 
           <div class="input-group">
-            <label>COMM_LINK</label>
+            <label>EMAIL ADDRESS</label>
             <input 
               v-model="form.email" 
               type="email" 
-              placeholder="Email Address" 
+              placeholder="Enter your email" 
               required 
             />
           </div>
 
           <div class="input-group full">
-            <label>THREAT_LEVEL / PRIORITY</label>
+            <label>PRIORITY LEVEL</label>
             <select v-model="form.priority">
-              <option value="normal">NORMAL - STANDARD INQUIRY</option>
-              <option value="urgent">URGENT - RAPID RESPONSE</option>
-              <option value="critical">CRITICAL - IMMEDIATE DEPLOYMENT</option>
+              <option value="normal">Standard Inquiry</option>
+              <option value="urgent">Urgent Response</option>
+              <option value="critical">Critical/Emergency</option>
             </select>
           </div>
 
           <div class="input-group full">
-            <label>INTEL_DESCRIPTION</label>
+            <label>YOUR INQUIRY</label>
             <textarea 
               v-model="form.message" 
-              placeholder="Details of your security requirements..." 
+              placeholder="How can we assist with your security needs?" 
               rows="5" 
               required
             ></textarea>

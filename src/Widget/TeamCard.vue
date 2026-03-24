@@ -13,7 +13,7 @@ defineProps({
       <img :src="image" :alt="name" class="member-img" />
       <div class="status-badge">
         <span class="pulse"></span>
-        STATUS: ACTIVE
+        ON DUTY
       </div>
       <div class="overlay"></div>
     </div>

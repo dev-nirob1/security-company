@@ -27,11 +27,6 @@ defineProps({
         <h1 class="text-gradient">{{ title }}</h1>
         <p v-if="subtitle" class="subtitle">{{ subtitle }}</p>
       </div>
-
-      <div class="tech-markers">
-        <div class="marker"><span>COORD: 51.5074° N, 0.1278° W</span></div>
-        <div class="line"></div>
-      </div>
     </div>
   </section>
 </template>

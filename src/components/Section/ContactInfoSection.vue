@@ -4,18 +4,18 @@ import IntelNode from '@/Widget/IntelNode.vue'
 
 const contactInfo = [
   {
-    label: 'NODE_HQ_LOC',
+    label: 'Main Office',
     value: '72 Tactical Way, London, UK',
     icon: 'fa-location-dot'
   },
   {
-    label: 'SECURE_LINE_1',
+    label: 'Secure Line',
     value: '+44 20 7946 0123',
     icon: 'fa-phone',
     link: 'tel:+442079460123'
   },
   {
-    label: 'ENCRYPTED_COMMS',
+    label: 'General Inquiries',
     value: 'ops@securecorp.com',
     icon: 'fa-envelope',
     link: 'mailto:ops@securecorp.com'

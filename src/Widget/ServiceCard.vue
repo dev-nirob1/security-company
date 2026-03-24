@@ -29,7 +29,7 @@ defineProps({
 <style scoped>
 .service-card {
   position: relative;
-  background: rgba(15, 23, 42, 0.6);
+  background: var(--bg-dark);
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 2.5rem 2rem;
   border-radius: 4px;
@@ -39,11 +39,6 @@ defineProps({
   display: flex;
   flex-direction: column;
   overflow: hidden;
-}
-
-.service-card.featured {
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(15, 23, 42, 0.8));
-  border-color: rgba(245, 158, 11, 0.25);
 }
 
 .card-header {
@@ -141,7 +136,6 @@ p {
 }
 
 .service-card:hover {
-  background: rgba(15, 23, 42, 0.85);
   border-color: var(--primary);
   transform: translateY(-5px);
 }

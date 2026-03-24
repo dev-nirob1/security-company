@@ -3,48 +3,45 @@ import SectionHeader from '@/Widget/SectionHeader.vue'
 import ServiceCard from '@/Widget/ServiceCard.vue'
 
 const services = [
-  { 
-    title: 'Executive Protection', 
+  {
+    title: 'Executive Protection',
     desc: 'Close protection for high-profile assets and individuals worldwide.',
-    icon: 'fa-user-shield'
+    icon: 'fa-user-shield',
   },
-  { 
-    title: 'Asset Surveillance', 
+  {
+    title: 'Asset Surveillance',
     desc: 'Advanced monitoring and infrastructural resource protection.',
-    icon: 'fa-tower-observation'
+    icon: 'fa-tower-observation',
   },
-  { 
-    title: 'Strategic Audit', 
+  {
+    title: 'Strategic Audit',
     desc: 'Vulnerability assessment and high-level defensive mapping.',
-    icon: 'fa-chart-pie'
+    icon: 'fa-chart-pie',
   },
-  { 
-    title: 'Rapid Intercept', 
+  {
+    title: 'Rapid Intercept',
     desc: 'Emergency response units available for immediate high-stakes intervention.',
     icon: 'fa-bolt',
-    featured: true
+    featured: true,
   },
-  { 
-    title: 'Digital Defense', 
+  {
+    title: 'Digital Defense',
     desc: 'Advanced cybersecurity and enterprise data protection.',
-    icon: 'fa-laptop-code'
-  }
+    icon: 'fa-laptop-code',
+  },
 ]
 </script>
 
 <template>
   <section class="services-section section-padding">
     <div class="container relative">
-      <SectionHeader 
-        subtitle="Professional Services" 
-        title="Strategic Protection" 
-      />
+      <SectionHeader subtitle="Professional Services" title="Strategic Protection" />
 
       <div class="services-grid">
-        <div 
-          v-for="service in services" 
+        <div
+          v-for="service in services"
           :key="service.title"
-          :class="['grid-item', { 'wide': service.featured }]"
+          :class="['grid-item', { wide: service.featured }]"
         >
           <ServiceCard v-bind="service" />
         </div>
@@ -55,7 +52,7 @@ const services = [
 
 <style scoped>
 .services-section {
-  background-color: var(--bg-dark);
+  background-color: var(--secondary);
 }
 
 .section-header {
@@ -66,7 +63,7 @@ const services = [
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .grid-item.wide {

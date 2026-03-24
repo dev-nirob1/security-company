@@ -6,12 +6,7 @@
     <div class="container">
       <div class="mission-grid">
         <div class="content-side">
-          <div class="tech-metadata">
-            <span class="token">PROTOCOL: ALPHA-9</span>
-            <span class="token">OBJECTIVE: UNWAVERING_PROTECTION</span>
-          </div>
-          
-          <h2 class="section-title">Enforcing Global <span class="accent">Security Protocols</span></h2>
+          <h2 class="section-title">Enforcing Global <span class="accent">Security Excellence</span></h2>
           
           <div class="mission-description">
             <p class="lead">Our mission is not merely to provide guards, but to engineer environments of absolute certainty through precision tactical execution and state-of-the-art intelligence.</p>
