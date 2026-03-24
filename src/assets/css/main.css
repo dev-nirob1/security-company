@@ -38,7 +38,6 @@ body {
 
 /* Paragraph styling as requested */
 p {
-  color: var(--text-muted);
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 1.5rem;

@@ -10,21 +10,21 @@ const testimonials = [
     role: 'CEO, Knight Corp',
     content:
       'SecureCorp has been our trusted partner for over 5 years. Their tactical integration and response times are simply unparalleled in the industry.',
-    avatar: 'AK',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop',
   },
   {
     name: 'Sarah Chen',
     role: 'Operations Director',
     content:
       "The professional conduct of their elite guards is world-class. They don't just provide security; they provide absolute peace of mind.",
-    avatar: 'SC',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop',
   },
   {
     name: 'James Wilson',
     role: 'Residential Manager',
     content:
       'Implementing their 24/7 surveillance system was the best decision for our community. Safe, secure, and highly professional.',
-    avatar: 'JW',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop',
   },
 ]
 

@@ -9,8 +9,8 @@
           <h2 class="section-title">Enforcing Global <span class="accent">Security Excellence</span></h2>
           
           <div class="mission-description">
-            <p class="lead">Our mission is not merely to provide guards, but to engineer environments of absolute certainty through precision tactical execution and state-of-the-art intelligence.</p>
-            <p>Founded on the principles of military discipline and technological innovation, SecureCorp has evolved from a local response unit into a global leader in high-stakes security management. We believe that in the modern threat landscape, reactive measures are insufficient. We operate on a philosophy of proactive neutralisation and pre-emptive readiness.</p>
+            <p class="lead">We provide peace of mind through precision security and intelligent protection.</p>
+            <p>At SecureCorp, we combine years of field expertise with modern technology to ensure your safety. Our focus is on proactive readiness—identifying and neutralizing risks before they become threats.</p>
           </div>
           
           <div class="stats-mini-grid">

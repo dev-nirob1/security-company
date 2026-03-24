@@ -43,12 +43,12 @@ defineProps({
 }
 
 .node-label {
-  font-family: monospace;
   font-size: 0.7rem;
   color: var(--primary);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   margin-bottom: 4px;
+  font-weight: 700;
   opacity: 0.8;
 }
 

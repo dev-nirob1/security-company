@@ -86,7 +86,6 @@
 
 .hero-desc {
   font-size: 1.25rem;
-  color: var(--text-muted);
   margin-bottom: 2.5rem;
   max-width: 500px;
 }

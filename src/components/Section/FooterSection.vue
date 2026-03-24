@@ -11,9 +11,18 @@
           Your safety is our primary mission since 2011.
         </p>
         <div class="social-links">
-          <!-- Placeholder social icons could go here -->
-          <span class="social-placeholder">LinkedIn</span>
-          <span class="social-placeholder">Twitter</span>
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="X (Twitter)">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
         </div>
       </div>
 
@@ -97,14 +106,28 @@
 
 .social-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
-.social-placeholder {
-  font-size: 0.85rem;
-  color: var(--primary);
-  font-weight: 600;
-  cursor: pointer;
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+}
+
+.social-icon:hover {
+  background: var(--primary);
+  color: var(--secondary);
+  transform: translateY(-3px);
+  border-color: var(--primary);
 }
 
 .footer-nav {

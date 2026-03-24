@@ -3,7 +3,7 @@ defineProps({
   name: { type: String, required: true },
   role: { type: String, required: true },
   content: { type: String, required: true },
-  avatar: { type: String, required: true },
+  image: { type: String, required: true },
 })
 </script>
 
@@ -15,7 +15,9 @@ defineProps({
       </div>
       <p class="content">{{ content }}</p>
       <div class="author">
-        <div class="avatar">{{ avatar }}</div>
+        <div class="avatar">
+          <img :src="image" :alt="name" class="avatar-img" />
+        </div>
         <div class="info">
           <h4>{{ name }}</h4>
           <span>{{ role }}</span>
@@ -53,9 +55,9 @@ defineProps({
 }
 
 .quote-icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--primary);
-  opacity: 0.4;
+  opacity: 0.6;
   margin-bottom: 1.5rem;
 }
 
@@ -74,17 +76,18 @@ defineProps({
 }
 
 .avatar {
-  width: 46px;
-  height: 46px;
-  background: var(--primary);
-  color: var(--secondary);
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 0.85rem;
+  overflow: hidden;
+  border: 1px solid var(--primary);
   flex-shrink: 0;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 h4 {

@@ -1,14 +1,5 @@
 <template>
   <section class="cta-section">
-    <div class="cta-bg">
-      <img
-        src="https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?q=80&w=2070&auto=format&fit=crop"
-        alt="Security"
-        class="bg-image"
-      />
-      <div class="overlay"></div>
-    </div>
-
     <div class="container cta-content">
       <div class="content-wrapper">
         <span class="badge">Take Action Now</span>
@@ -32,36 +23,18 @@
   position: relative;
   padding: 8rem 0;
   overflow: hidden;
-}
-
-.cta-bg {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-}
-
-.bg-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.25);
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(2, 6, 23, 0.95) 0%,
-    rgba(245, 158, 11, 0.08) 50%,
-    rgba(2, 6, 23, 0.95) 100%
-  );
-}
-
-.cta-content {
-  position: relative;
-  z-index: 10;
-  text-align: center;
+  /* Ultimate layering fix: Gradient + Image in one command */
+  background: 
+    linear-gradient(
+      135deg,
+      rgba(2, 6, 23, 0.9) 0%,
+      rgba(245, 158, 11, 0.1) 50%,
+      rgba(2, 6, 23, 0.9) 100%
+    ),
+    url('https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .content-wrapper {
@@ -84,7 +57,7 @@
 }
 
 h2 {
-  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -96,9 +69,10 @@ h2 {
 }
 
 p {
-  font-size: 1.1rem;
-  color: var(--text-muted);
+  font-size: 1.25rem;
+  color: #fff;
   margin-bottom: 3rem;
+  opacity: 0.9;
 }
 
 .cta-actions {

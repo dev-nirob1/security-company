@@ -3,7 +3,7 @@ defineProps({
   name: { type: String, required: true },
   role: { type: String, required: true },
   image: { type: String, required: true },
-  socials: { type: Array, default: () => [] }
+  socials: { type: Array, default: () => [] },
 })
 </script>
 
@@ -17,11 +17,11 @@ defineProps({
       </div>
       <div class="overlay"></div>
     </div>
-    
+
     <div class="info-box">
       <div class="role-tag">{{ role }}</div>
       <h3 class="member-name">{{ name }}</h3>
-      
+
       <div class="tech-lines">
         <span></span>
         <span></span>
@@ -32,7 +32,7 @@ defineProps({
 
 <style scoped>
 .team-card {
-  background: var(--bg-dark);
+  background-color: var(--secondary);
   border: 1px solid rgba(255, 255, 255, 0.05);
   clip-path: polygon(0 0, 92% 0, 100% 8%, 100% 100%, 8% 100%, 0 92%);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -52,7 +52,9 @@ defineProps({
   height: 100%;
   object-fit: cover;
   filter: saturate(0.8) contrast(1.1);
-  transition: transform 0.6s ease, filter 0.6s ease;
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
 }
 
 .status-badge {
@@ -82,9 +84,18 @@ defineProps({
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.5); opacity: 0.5; }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .overlay {
@@ -124,8 +135,12 @@ defineProps({
   transition: 0.3s;
 }
 
-.tech-lines span:first-child { width: 30px; }
-.tech-lines span:last-child { width: 10px; }
+.tech-lines span:first-child {
+  width: 30px;
+}
+.tech-lines span:last-child {
+  width: 10px;
+}
 
 .team-card:hover {
   border-color: var(--primary);

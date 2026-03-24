@@ -6,20 +6,20 @@ const contactInfo = [
   {
     label: 'Main Office',
     value: '72 Tactical Way, London, UK',
-    icon: 'fa-location-dot'
+    icon: 'fa-location-dot',
   },
   {
     label: 'Secure Line',
     value: '+44 20 7946 0123',
     icon: 'fa-phone',
-    link: 'tel:+442079460123'
+    link: 'tel:+442079460123',
   },
   {
     label: 'General Inquiries',
     value: 'ops@securecorp.com',
     icon: 'fa-envelope',
-    link: 'mailto:ops@securecorp.com'
-  }
+    link: 'mailto:ops@securecorp.com',
+  },
 ]
 </script>
 
@@ -30,28 +30,19 @@ const contactInfo = [
         <div class="form-side">
           <TacticalForm />
         </div>
-        
+
         <div class="info-side">
           <div class="info-header">
-            <span class="badge">Connection Node</span>
-            <h2>Direct Tactical <span class="accent">Intel Access</span></h2>
-            <p>Our command center coordinates all transmission traffic. Use the secure channel for priority assessments.</p>
+            <span class="badge">Connection Channels</span>
+            <h2>Direct Global <span class="accent">Assistance</span></h2>
+            <p>
+              Connect with our main office for immediate security inquiries and deployment
+              strategies.
+            </p>
           </div>
-          
+
           <div class="nodes-list">
-            <IntelNode 
-              v-for="node in contactInfo" 
-              :key="node.label" 
-              v-bind="node"
-            />
-          </div>
-          
-          <div class="network-map">
-            <!-- Stylized CSS-based "grid" map placeholder -->
-            <div class="map-grid">
-              <div class="map-point point-1"><span></span>LDN_HQ</div>
-              <div class="map-grid-lines"></div>
-            </div>
+            <IntelNode v-for="node in contactInfo" :key="node.label" v-bind="node" />
           </div>
         </div>
       </div>
@@ -71,29 +62,32 @@ const contactInfo = [
   align-items: start;
 }
 
+.visual-placeholder {
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem;
+  clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+}
+
+.placeholder-content i {
+  font-size: 4rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  opacity: 0.5;
+}
+
+.placeholder-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
 .info-header {
   margin-bottom: 3rem;
-}
-
-.badge {
-  display: inline-block;
-  padding: 0.4rem 1rem;
-  background: rgba(245, 158, 11, 0.1);
-  color: var(--primary);
-  border: 1px solid rgba(245, 158, 11, 0.2);
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.accent {
-  color: var(--primary);
 }
 
 .nodes-list {
@@ -114,23 +108,23 @@ h2 {
 .map-grid {
   position: absolute;
   inset: 0;
-  background-image: 
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-image:
+    linear-gradient(rgba(245, 158, 11, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 158, 11, 0.05) 1px, transparent 1px);
   background-size: 30px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .map-point {
-  position: absolute;
-  top: 40%;
-  left: 30%;
   display: flex;
   align-items: center;
   gap: 10px;
   color: var(--primary);
-  font-family: monospace;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 700;
+  letter-spacing: 0.1em;
 }
 
 .map-point span {

@@ -8,30 +8,25 @@ import CtaSection from '@/components/Section/CtaSection.vue'
 
 <template>
   <div class="about-page">
-    <PageHero 
-      title="Tactical Heritage" 
+    <PageHero
+      title="Tactical Heritage"
       subtitle="SecureCorp stands as the vanguard of high-stakes protection, blending veteran military expertise with next-generation security engineering."
-      bgImage="https://images.unsplash.com/photo-1558236711-33157ee21345?q=80&w=2070&auto=format&fit=crop"
     />
-    
+
     <MissionSection />
-    
-    <div class="pillars-wrapper">
+
+    <div class="advan">
       <AdvantageSection />
     </div>
-    
+
     <LeadershipSection />
-    
+
     <CtaSection />
   </div>
 </template>
 
 <style scoped>
-.about-page {
-  background-color: var(--bg-dark);
-}
-
-.pillars-wrapper {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+.advan {
+  background-color: var(--secondary) !important;
 }
 </style>
