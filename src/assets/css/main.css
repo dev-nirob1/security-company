@@ -5,17 +5,17 @@
   --secondary: #0f172a;
   --bg-dark: #020617;
   --bg-card: #0f172a;
-  
+
   /* Text Colors */
   --text-primary: #f8fafc;
   --text-muted: #94a3b8;
   --text-accent: #f59e0b;
-  
+
   /* Utilities */
   --border: rgba(148, 163, 184, 0.1);
   --glass-bg: rgba(15, 23, 42, 0.75);
   --glass-border: rgba(255, 255, 255, 0.1);
-  
+
   /* Fonts */
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
   --font-heading: 'Outfit', 'Inter', sans-serif;
@@ -60,11 +60,16 @@ p.accent {
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--text-primary);
   letter-spacing: -0.025em;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 a {

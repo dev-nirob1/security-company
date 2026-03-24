@@ -39,7 +39,7 @@
 }
 
 .stat-number {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 800;
   color: var(--primary);
 }
