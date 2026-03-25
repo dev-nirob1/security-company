@@ -1,12 +1,12 @@
 <script setup>
-// import StatsSection from '@/components/Section/StatsSection.vue'
 import ServicesSection from '@/components/Section/ServicesSection.vue'
-import AdvantageSection from '@/components/Section/AdvantageSection.vue'
+// import AdvantageSection from '@/components/Section/AdvantageSection.vue'
 import GallerySection from '@/components/Section/GallerySection.vue'
 import TestimonialsSection from '@/components/Section/TestimonialsSection.vue'
 import CtaSection from '@/components/Section/CtaSection.vue'
 import HeroSection from '../components/Section/HeroSection.vue'
 import StatsSection from '../components/Section/StatsSection.vue'
+import AdvantageSection from '../components/Section/AdvantageSection.vue'
 </script>
 
 <template>
@@ -14,6 +14,7 @@ import StatsSection from '../components/Section/StatsSection.vue'
     <HeroSection />
     <StatsSection />
     <AdvantageSection />
+    <!-- <AdvantageSection /> -->
     <ServicesSection />
     <GallerySection />
     <TestimonialsSection />
