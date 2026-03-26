@@ -1,6 +1,6 @@
 <script setup>
-import GalleryItem from '@/Widget/GalleryItem.vue'
 import SectionHeader from '../Widget/SectionHeader.vue'
+import GalleryCard from '@/zems/Front/components/Widget/GalleryCard.vue'
 
 const items = [
   {
@@ -45,10 +45,14 @@ const items = [
 <template>
   <section class="gallery-section section-padding">
     <div class="container">
-      <SectionHeader subTitle="Visual Operations" title="SecureCorp in Action" />
+      <SectionHeader class="mb-3" subTitle="Visual Operations" title="SecureCorp in Action" />
 
-      <div class="gallery-grid">
-        <GalleryItem v-for="item in items" :key="item.title" v-bind="item" class="gallery-card" />
+      <div class="medium-2 large-3 gap-2">
+        <GalleryCard
+          v-for="(item, i) in items"
+          :key="i"
+          v-bind="item"
+        />
       </div>
     </div>
   </section>
@@ -56,25 +60,7 @@ const items = [
 
 <style scoped>
 .gallery-section {
+  padding: var(--section-padding) 0;
   background-color: var(--bg-dark);
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 4rem;
-}
-
-@media (max-width: 991px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
 }
 </style>

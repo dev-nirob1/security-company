@@ -25,7 +25,7 @@ defineProps({
   </div>
 </template>
 
-<style scoped>
+<style>
 .service-card {
   position: relative;
   background: var(--bg-dark-color);

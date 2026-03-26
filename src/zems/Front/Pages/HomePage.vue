@@ -19,7 +19,7 @@ import ServicesSection from '../components/Section/ServicesSection.vue'
     <div class="bg-secondary">
       <ServicesSection />
     </div>
-    <!-- <GallerySection /> -->
+    <GallerySection />
     <!-- <TestimonialsSection /> -->
     <CtaSection />
   </div>
