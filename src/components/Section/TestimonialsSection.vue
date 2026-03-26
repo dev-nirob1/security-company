@@ -1,8 +1,8 @@
 <script setup>
-import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel'
+import { Carousel, Slide, Navigation } from 'vue3-carousel'
 import 'vue3-carousel/carousel.css'
-import TestimonialCard from '@/Widget/TestimonialCard.vue'
 import SectionHeader from '../Widget/SectionHeader.vue'
+import TestimonialCard from '@/zems/Front/components/Widget/TestimonialCard.vue'
 
 const testimonials = [
   {
@@ -47,18 +47,17 @@ const carouselConfig = {
 </script>
 
 <template>
-  <section class="testimonials-section section-padding">
+  <section class="testimonials-section">
     <div class="container">
-      <SectionHeader subTitle="Trusted by Leaders" title="Client Testimonials" />
+      <SectionHeader class="mb-3" subTitle="Trusted by Leaders" title="Client Testimonials" />
 
       <Carousel v-bind="carouselConfig" class="testimonial-carousel">
         <Slide v-for="item in testimonials" :key="item.name">
-          <TestimonialCard v-bind="item" />
+          <TestimonialCard :item="item" />
         </Slide>
 
         <template #addons>
           <Navigation />
-          <Pagination />
         </template>
       </Carousel>
     </div>
@@ -67,12 +66,7 @@ const carouselConfig = {
 
 <style scoped>
 .testimonials-section {
-  overflow: hidden;
-  background-color: var(--secondary);
-}
-
-.testimonial-carousel {
-  margin-top: 2rem;
+  padding: var(--section-padding) 0;
 }
 
 /* Override vue3-carousel Navigation Buttons */
@@ -80,18 +74,18 @@ const carouselConfig = {
 :deep(.carousel__next) {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--glass-border);
-  color: #fff;
-  width: 50px;
-  height: 50px;
+  color: var(--text-primary);
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   transition: 0.3s;
 }
 
 :deep(.carousel__prev:hover),
 :deep(.carousel__next:hover) {
-  background: var(--primary);
-  border-color: var(--primary);
-  color: var(--secondary);
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 :deep(.carousel__prev) {
@@ -99,26 +93,6 @@ const carouselConfig = {
 }
 :deep(.carousel__next) {
   right: -1rem;
-}
-
-/* Override Pagination Dots */
-:deep(.carousel__pagination) {
-  gap: 0.75rem;
-  margin-top: 1.5rem;
-}
-
-:deep(.carousel__pagination-button::after) {
-  width: 8px;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transition: 0.3s;
-}
-
-:deep(.carousel__pagination-button--active::after) {
-  background: var(--primary);
-  width: 24px;
-  border-radius: 4px;
 }
 
 :deep(.carousel__slide) {

@@ -1,26 +1,25 @@
 <script setup>
+import BaseParagraph from '@/components/Elements/BaseParagraph.vue'
+
 defineProps({
-  name: { type: String, required: true },
-  role: { type: String, required: true },
-  content: { type: String, required: true },
-  image: { type: String, required: true },
+  item: { type: Object },
 })
 </script>
 
 <template>
   <div class="testimonial-card">
     <div class="card-body">
-      <div class="quote-icon">
+      <div class="icon">
         <i class="fa-solid fa-quote-left"></i>
       </div>
-      <p class="content">{{ content }}</p>
+      <BaseParagraph class="content">{{ item.content }}</BaseParagraph>
       <div class="author">
         <div class="avatar">
-          <img :src="image" :alt="name" class="avatar-img" />
+          <img :src="item.image" :alt="item.name" class="avatar-img" />
         </div>
         <div class="info">
-          <h4>{{ name }}</h4>
-          <span>{{ role }}</span>
+          <h6>{{ item.name }}</h6>
+          <span>{{ item.role }}</span>
         </div>
       </div>
     </div>
@@ -33,16 +32,12 @@ defineProps({
 
 <style scoped>
 .testimonial-card {
-  background: var(--bg-dark);
+  background: var(--bg-dark-color);
   border: 1px solid rgba(255, 255, 255, 0.08);
   clip-path: polygon(0 0, 92% 0, 100% 8%, 100% 100%, 8% 100%, 0 92%);
-  padding: 0;
-  text-align: left;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
 }
 
 .card-body {
@@ -50,28 +45,28 @@ defineProps({
 }
 
 .testimonial-card:hover {
-  border-color: var(--primary);
+  border-color: var(--primary-color);
   transform: translateY(-4px);
 }
 
-.quote-icon {
+.icon {
   font-size: 2.5rem;
-  color: var(--primary);
+  color: var(--primary-color);
   opacity: 0.6;
-  margin-bottom: 1.5rem;
 }
 
 .content {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   color: #fff;
   line-height: 1.7;
   font-style: italic;
-  margin-bottom: 2rem;
+  margin: 1rem 0;
 }
 
 .author {
+  margin-top: 2rem;
   display: flex;
-  gap: 1.25rem;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -80,31 +75,23 @@ defineProps({
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid var(--primary);
   flex-shrink: 0;
 }
-
-.avatar-img {
+.avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-h4 {
-  color: #fff;
-  margin-bottom: 2px;
-  font-size: 1rem;
-}
-
 .info span {
-  font-size: 0.8rem;
-  color: var(--text-muted);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
 }
 
 .tech-lines {
   display: flex;
   gap: 4px;
-  padding: 0 2.5rem 1.5rem;
+  padding: 0 2.5rem 2.5rem;
 }
 
 .tech-lines span {
@@ -121,7 +108,7 @@ h4 {
 }
 
 .testimonial-card:hover .tech-lines span {
-  background: var(--primary);
-  opacity: 0.6;
+  background: var(--primary-color);
+  opacity: 0.7;
 }
 </style>
