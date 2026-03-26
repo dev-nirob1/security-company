@@ -14,7 +14,7 @@ defineProps({
     <BaseTitle>{{ title }}</BaseTitle>
   </div>
 </template>
-<style scoped>
+<style>
 .section-header .badge {
   padding: 0.5rem 0.75rem;
   border: 1px solid rgba(245, 158, 11, 0.2);

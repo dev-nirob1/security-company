@@ -48,11 +48,7 @@ const items = [
       <SectionHeader class="mb-3" subTitle="Visual Operations" title="SecureCorp in Action" />
 
       <div class="medium-2 large-3 gap-2">
-        <GalleryCard
-          v-for="(item, i) in items"
-          :key="i"
-          v-bind="item"
-        />
+        <GalleryCard v-for="(item, i) in items" :key="i" v-bind="item" />
       </div>
     </div>
   </section>
