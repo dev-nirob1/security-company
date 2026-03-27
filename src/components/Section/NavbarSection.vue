@@ -2,6 +2,7 @@
 import BaseButton from '../Elements/BaseButton.vue'
 import BaseImage from '../Elements/BaseImage.vue'
 import { ref } from 'vue'
+import ListItem from '../Elements/ListItem.vue'
 
 const isMenuOpen = ref(false)
 
@@ -18,19 +19,20 @@ const toggleMenu = () => {
           <BaseImage image="/logo.jpeg" alt="Logo" />
         </router-link>
         <ul :class="isMenuOpen && 'open'">
-          <li>
+          <ListItem>
             <router-link to="/">Home</router-link>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <router-link to="/services">Services</router-link>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <router-link to="/about">About Us</router-link>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <router-link class="btn btn-primary" to="/contact">Contact Us</router-link>
-          </li>
+          </ListItem>
         </ul>
+        <!-- hamburger  -->
         <BaseButton class="hamburger" @click="toggleMenu">
           <i :class="isMenuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
         </BaseButton>
