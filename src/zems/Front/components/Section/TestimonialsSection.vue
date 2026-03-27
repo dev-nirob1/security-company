@@ -1,8 +1,8 @@
 <script setup>
 import { Carousel, Slide, Navigation } from 'vue3-carousel'
 import 'vue3-carousel/carousel.css'
-import SectionHeader from '../Widget/SectionHeader.vue'
-import TestimonialCard from '@/zems/Front/components/Widget/TestimonialCard.vue'
+import SectionHeader from '@/components/Widget/SectionHeader.vue'
+import TestimonialCard from '../Widget/TestimonialCard.vue'
 
 const testimonials = [
   {

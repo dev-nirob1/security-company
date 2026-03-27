@@ -1,6 +1,6 @@
 <script setup>
-import SectionHeader from '../Widget/SectionHeader.vue'
-import GalleryCard from '@/zems/Front/components/Widget/GalleryCard.vue'
+import SectionHeader from '@/components/Widget/SectionHeader.vue'
+import GalleryCard from '../Widget/GalleryCard.vue'
 
 const items = [
   {

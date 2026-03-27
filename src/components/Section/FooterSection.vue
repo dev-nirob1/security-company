@@ -1,14 +1,85 @@
+<script setup>
+import { RouterLink } from 'vue-router'
+import BaseImage from '../Elements/BaseImage.vue'
+import BaseParagraph from '../Elements/BaseParagraph.vue'
+import ListItem from '../Elements/ListItem.vue'
+</script>
+
 <template>
   <footer class="footer">
-    <div class="container footer-grid">
+    <div class="container py-5">
+      <div class="medium-2 large-5 gap-2">
+        <div class="brand-info large-span-2">
+          <RouterLink to="/" class="logo">
+            <BaseImage image="/logo.jpeg" />
+            <BaseParagraph
+              >Professional security services for corporate and private sectors. Your safety is our
+              primary mission since 2011.</BaseParagraph
+            >
+          </RouterLink>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="X (Twitter)">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="navigation">
+          <h5>Quick Links</h5>
+          <ul>
+            <ListItem><router-link to="/">Home</router-link></ListItem>
+            <ListItem><router-link to="/services">Services</router-link></ListItem>
+            <ListItem><router-link to="/about">About Us</router-link></ListItem>
+            <ListItem><router-link to="/contact">Contact</router-link></ListItem>
+          </ul>
+        </div>
+        <div class="navigation">
+          <h5>Services</h5>
+          <ul>
+            <ListItem><router-link to="/services">Executive Protection</router-link></ListItem>
+            <ListItem><router-link to="/services">Asset Surveillance</router-link></ListItem>
+            <ListItem><router-link to="/services">Risk Assessment</router-link></ListItem>
+            <ListItem><a href="#">Privacy Policy</a></ListItem>
+            <ListItem><a href="#">Terms of Service</a></ListItem>
+          </ul>
+        </div>
+        <div class="navigation">
+          <h5>Contact Us</h5>
+          <ul>
+            <ListItem>123 Security Avenue, Suite 500 New York, NY 10001</ListItem>
+            <ListItem>Email: contact@securecorp.com</ListItem>
+            <ListItem>Phone: +1 (555) 123-4567</ListItem>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="bottom-content">
+          <BaseParagraph>&copy; 2026 SecureCorp. All rights reserved.</BaseParagraph>
+          <BaseParagraph>
+            Design & Developed by
+            <a href="https://webpoka.com/" target="_blank">Webpoka</a>
+          </BaseParagraph>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="container footer-grid">
       <div class="footer-brand">
         <router-link to="/" class="logo">
-          <span class="logo-icon">🛡️</span>
-          <span class="logo-text">SECURE<span class="accent">CORP</span></span>
+          <BaseImage image="/logo.jpeg" alt="Logo" />
         </router-link>
         <p class="brand-desc">
-          Professional security services for corporate and private sectors. 
-          Your safety is our primary mission since 2011.
+          Professional security services for corporate and private sectors. Your safety is our
+          primary mission since 2011.
         </p>
         <div class="social-links">
           <a href="#" class="social-icon" aria-label="LinkedIn">
@@ -36,7 +107,7 @@
             <li><router-link to="/contact">Contact</router-link></li>
           </ul>
         </div>
-        
+
         <div class="nav-column">
           <h3>Services</h3>
           <ul>
@@ -62,49 +133,27 @@
         <div class="bottom-content">
           <p>&copy; 2026 SecureCorp. All rights reserved.</p>
           <p class="attribution">
-            Design & Developed by <a href="https://webpoka.com/" target="_blank" class="webpoka-link">webpoka</a>
+            Design & Developed by
+            <a href="https://webpoka.com/" target="_blank" class="webpoka-link">webpoka</a>
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
   </footer>
 </template>
 
 <style scoped>
 .footer {
-  background-color: #01040f;
-  padding: 6rem 0 2rem;
-  border-top: 1px solid var(--border);
-  color: #fff;
+  background-color: var(--bg-dark-color);
+  color: var(--text-secondary);
 }
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 2fr 1fr;
-  gap: 4rem;
-  margin-bottom: 4rem;
+.logo img {
+  height: 70px;
 }
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 1.5rem;
-  font-weight: 800;
-  text-decoration: none;
-  margin-bottom: 1.5rem;
+.footer .brand-info p {
+  font-size: 1.15rem;
+  margin-top: 1.15rem;
 }
-
-.logo-text .accent {
-  color: var(--primary);
-}
-
-.brand-desc {
-  max-width: 320px;
-  opacity: 0.8;
-  margin-bottom: 2rem;
-}
-
 .social-links {
   display: flex;
   gap: 1rem;
@@ -118,107 +167,40 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
   font-size: 1.1rem;
   transition: all 0.3s ease;
   clip-path: polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
 }
 
 .social-icon:hover {
-  background: var(--primary);
-  color: var(--secondary);
+  background: var(--primary-color);
+  color: var(--secondary-color);
   transform: translateY(-3px);
-  border-color: var(--primary);
+  border-color: var(--primary-color);
 }
-
-.footer-nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+.footer h5 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
 }
-
-.nav-column h3, .footer-contact h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--primary);
-}
-
-.nav-column ul {
-  list-style: none;
+.footer ul {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-
-.nav-column a {
-  color: var(--text-muted);
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: color 0.3s ease;
+.footer .navigation li {
+  color: var(--text-secondary);
 }
-
-.nav-column a:hover {
-  color: var(--primary);
+.footer .footer-bottom {
+  border-top: 1px solid var(--secondary-color);
+  font-size: 0.85rem;
+  padding: 1rem 0;
 }
-
-.footer-contact p {
-  opacity: 0.8;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-}
-
-.contact-detail span {
-  display: block;
-  color: #fff;
-  font-weight: 600;
-  margin-top: 0.25rem;
-}
-
-.footer-bottom {
-  padding-top: 2rem;
-  border-top: 1px solid var(--border);
-}
-
-.bottom-content {
+.footer .footer-bottom .bottom-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  color: var(--text-muted);
-  font-size: 0.875rem;
 }
-
-/* Legal links moved to nav column */
-
-.webpoka-link {
-  color: var(--primary);
-  font-weight: 700;
-  text-decoration: none;
-  transition: opacity 0.3s ease;
-}
-
-.webpoka-link:hover {
-  opacity: 0.8;
-  text-decoration: underline;
-}
-
-@media (max-width: 991px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-  .bottom-content {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
+.footer .footer-bottom .bottom-content a {
+  color: var(--primary-color);
 }
 </style>

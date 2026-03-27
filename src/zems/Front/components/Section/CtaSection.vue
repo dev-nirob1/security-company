@@ -1,7 +1,7 @@
 <script setup>
-import BaseImage from '../Elements/BaseImage.vue'
-import BaseParagraph from '../Elements/BaseParagraph.vue'
-import HeroTitle from '../Elements/HeroTitle.vue'
+import BaseImage from '@/components/Elements/BaseImage.vue'
+import BaseParagraph from '@/components/Elements/BaseParagraph.vue'
+import HeroTitle from '@/components/Elements/HeroTitle.vue'
 </script>
 
 <template>
