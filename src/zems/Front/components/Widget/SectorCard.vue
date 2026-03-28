@@ -46,11 +46,12 @@ defineProps({
   flex-shrink: 0;
   overflow: hidden;
 }
-
-.overlay {
+.sector-card .image::before {
+  content: '';
+  background: linear-gradient(to right, transparent, var(--secondary-color));
   position: absolute;
   inset: 0;
-  /* background: linear-gradient(to right, transparent, var(--bg-dark)); */
+  z-index: 5;
 }
 
 .icon {
