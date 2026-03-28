@@ -5,6 +5,7 @@
 // import CtaSection from '@/components/Section/CtaSection.vue'
 import PageHero from '@/components/Widget/PageHero.vue'
 import CtaSection from '../components/Section/CtaSection.vue'
+import MissionSection from '@/components/Section/MissionSection.vue'
 </script>
 
 <template>
@@ -15,9 +16,9 @@ import CtaSection from '../components/Section/CtaSection.vue'
       subtitle="SecureCorp stands as the vanguard of high-stakes protection, blending veteran military expertise with next-generation security engineering."
     />
 
-    <!-- <MissionSection />
+    <MissionSection />
 
-    <div class="advan">
+    <!-- <div class="advan">
       <AdvantageSection />
     </div>
 
