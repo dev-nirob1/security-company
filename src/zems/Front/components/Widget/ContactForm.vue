@@ -1,4 +1,6 @@
 <script setup>
+import InputField from '@/components/Elements/InputField.vue'
+import SubTitle from '@/components/Elements/SubTitle.vue'
 import { ref } from 'vue'
 
 const form = ref({
@@ -23,7 +25,40 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <div class="tactical-form-container">
+  <div class="form">
+    <SubTitle class="mb-2">SEND US A MESSAGE</SubTitle>
+    <form>
+      <div class="medium-2 gap-1">
+        <div class="input-group">
+          <label>FULL NAME</label>
+          <InputField placeholder="Enter your name" required />
+        </div>
+        <div class="input-group">
+          <label>EMAIL ADDRESS</label>
+          <InputField placeholder="Enter your email" required />
+        </div>
+      </div>
+      <div class="input-group">
+        <label>PRIORITY LEVEL</label>
+        <select v-model="form.priority">
+          <option value="normal">Standard Inquiry</option>
+          <option value="urgent">Urgent Response</option>
+          <option value="critical">Critical/Emergency</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label>YOUR INQUIRY</label>
+        <textarea
+          v-model="form.message"
+          placeholder="How can we assist with your security needs?"
+          rows="5"
+          required
+        ></textarea>
+      </div>
+      <Button class="width-full btn btn-primary">Submit</Button>
+    </form>
+  </div>
+  <!-- <div class="tactical-form-container">
     <div v-if="!isSubmitted" class="form-wrapper">
       <form @submit.prevent="handleSubmit" class="tactical-form">
         <div class="form-header">
@@ -34,22 +69,12 @@ const handleSubmit = () => {
         <div class="form-grid">
           <div class="input-group">
             <label>FULL NAME</label>
-            <input 
-              v-model="form.name" 
-              type="text" 
-              placeholder="Enter your name" 
-              required 
-            />
+            <input v-model="form.name" type="text" placeholder="Enter your name" required />
           </div>
 
           <div class="input-group">
             <label>EMAIL ADDRESS</label>
-            <input 
-              v-model="form.email" 
-              type="email" 
-              placeholder="Enter your email" 
-              required 
-            />
+            <input v-model="form.email" type="email" placeholder="Enter your email" required />
           </div>
 
           <div class="input-group full">
@@ -63,16 +88,16 @@ const handleSubmit = () => {
 
           <div class="input-group full">
             <label>YOUR INQUIRY</label>
-            <textarea 
-              v-model="form.message" 
-              placeholder="How can we assist with your security needs?" 
-              rows="5" 
+            <textarea
+              v-model="form.message"
+              placeholder="How can we assist with your security needs?"
+              rows="5"
               required
             ></textarea>
           </div>
         </div>
 
-        <button type="submit" class="btn-tactical submit-btn" :disabled="isSubmitting">
+        <button type="submit" class="btn btn-primary width-full mt-2" :disabled="isSubmitting">
           <span v-if="!isSubmitting">ESTABLISH CONNECTION</span>
           <span v-else class="loading-dots">ESTABLISHING...</span>
         </button>
@@ -84,79 +109,57 @@ const handleSubmit = () => {
         <i class="fa-solid fa-shield-check"></i>
       </div>
       <h3>Transmission Successful</h3>
-      <p>Your intelligence has been received. Our tactical team will contact you shortly via secure channel.</p>
-      <button @click="isSubmitted = false" class="btn-tactical-outline">NEW TRANSMISSION</button>
+      <p>
+        Your intelligence has been received. Our tactical team will contact you shortly via secure
+        channel.
+      </p>
+      <button @click="isSubmitted = false" class="btn btn-primary">NEW TRANSMISSION</button>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <style scoped>
-.tactical-form-container {
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(12px);
-  padding: 3rem;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+.form {
+  padding: 2rem;
+  background: var(--secondary-color);
   clip-path: polygon(0 0, 95% 0, 100% 5%, 100% 100%, 5% 100%, 0 95%);
-  position: relative;
 }
-
-.form-header {
+.form form {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
-  font-family: monospace;
-  font-size: 0.75rem;
-  color: var(--primary);
-  letter-spacing: 0.1em;
+  flex-direction: column;
+  gap: 0.75rem;
 }
-
-.header-line {
-  height: 2px;
-  width: 30px;
-  background: var(--primary);
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
 .input-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.15rem;
 }
-
-.input-group.full {
-  grid-column: span 2;
+.input-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
 }
-
-label {
-  font-family: monospace;
-  font-size: 0.65rem;
-  color: var(--text-muted);
-  font-weight: 700;
-  letter-spacing: 0.05em;
-}
-
-input, select, textarea {
-  background: rgba(2, 6, 23, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+input,
+select,
+textarea {
+  background: var(--bg-dark-color);
+  border: 1px solid var(--glass-border);
   padding: 1rem;
-  color: #fff;
-  font-family: var(--font-main);
+  color: var(--white-color);
   font-size: 0.95rem;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
   outline: none;
-  border-color: var(--primary);
-  background: rgba(15, 23, 42, 0.8);
-  box-shadow: 0 0 15px rgba(245, 158, 11, 0.15);
+  border-color: var(--primary-color);
+  background: var(--secondary-color);
 }
+
+/* 
+
 
 select {
   cursor: pointer;
@@ -224,13 +227,5 @@ select option {
   background: var(--primary);
   color: var(--secondary);
 }
-
-@media (max-width: 600px) {
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-  .input-group.full {
-    grid-column: span 1;
-  }
-}
+ */
 </style>

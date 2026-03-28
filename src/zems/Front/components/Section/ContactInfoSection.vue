@@ -1,6 +1,6 @@
 <script setup>
-import TacticalForm from '@/Widget/TacticalForm.vue'
 import IntelNode from '@/Widget/IntelNode.vue'
+import ContactForm from '../Widget/ContactForm.vue'
 
 const contactInfo = [
   {
@@ -26,12 +26,10 @@ const contactInfo = [
 <template>
   <section class="contact-info-section section-padding">
     <div class="container">
-      <div class="contact-grid">
-        <div class="form-side">
-          <TacticalForm />
-        </div>
+      <div class="medium-2 gap-2">
+        <ContactForm />
 
-        <div class="info-side">
+        <!-- <div class="info-side">
           <div class="info-header">
             <span class="badge">Connection Channels</span>
             <h2>Direct Global <span class="accent">Assistance</span></h2>
@@ -44,7 +42,7 @@ const contactInfo = [
           <div class="nodes-list">
             <IntelNode v-for="node in contactInfo" :key="node.label" v-bind="node" />
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -52,14 +50,8 @@ const contactInfo = [
 
 <style scoped>
 .contact-info-section {
-  background: var(--bg-dark);
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 6rem;
-  align-items: start;
+  padding: var(--section-padding) 0;
+  background: var(--bg-dark-color);
 }
 
 .visual-placeholder {

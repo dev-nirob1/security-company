@@ -1,15 +1,16 @@
 <script setup>
-import PageHero from '@/Widget/PageHero.vue'
-import ContactInfoSection from '@/components/Section/ContactInfoSection.vue'
+import ContactInfoSection from '@/zems/Front/components/Section/ContactInfoSection.vue'
+import PageHero from '@/components/Widget/PageHero.vue'
 </script>
 
 <template>
   <div class="contact-page">
-    <PageHero 
-      title="Secure Connection" 
+    <PageHero
+      routeName="Contact us"
+      title="Secure Connection"
       subtitle="Establish a priority link with our command center. Our tactical specialists are standing by for immediate intelligence assessment."
     />
-    
+
     <ContactInfoSection />
   </div>
 </template>
