@@ -158,6 +158,11 @@ textarea:focus {
   background: var(--secondary-color);
 }
 
+@media (min-width: 992px) {
+  .form {
+    padding: 3rem;
+  }
+}
 /* 
 
 

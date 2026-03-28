@@ -1,6 +1,7 @@
 <script setup>
-import IntelNode from '@/Widget/IntelNode.vue'
 import ContactForm from '../Widget/ContactForm.vue'
+import SectionHeader from '@/components/Widget/SectionHeader.vue'
+import ContactData from '../Widget/ContactData.vue'
 
 const contactInfo = [
   {
@@ -24,25 +25,21 @@ const contactInfo = [
 </script>
 
 <template>
-  <section class="contact-info-section section-padding">
+  <section class="contact-info-section">
     <div class="container">
-      <div class="medium-2 gap-2">
+      <div class="medium-2 gap-3">
         <ContactForm />
 
-        <!-- <div class="info-side">
-          <div class="info-header">
-            <span class="badge">Connection Channels</span>
-            <h2>Direct Global <span class="accent">Assistance</span></h2>
-            <p>
-              Connect with our main office for immediate security inquiries and deployment
-              strategies.
-            </p>
-          </div>
-
-          <div class="nodes-list">
-            <IntelNode v-for="node in contactInfo" :key="node.label" v-bind="node" />
-          </div>
-        </div> -->
+        <div>
+          <SectionHeader
+            class="mb-2"
+            title="Connection Channels"
+            subTitle="Direct Global Assistance"
+          />
+          <ul>
+            <ContactData v-for="(data, i) in contactInfo" :key="i" :data="data" />
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -53,84 +50,9 @@ const contactInfo = [
   padding: var(--section-padding) 0;
   background: var(--bg-dark-color);
 }
-
-.visual-placeholder {
-  min-height: 400px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 3rem;
-  clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
-}
-
-.placeholder-content i {
-  font-size: 4rem;
-  color: var(--primary);
-  margin-bottom: 2rem;
-  opacity: 0.5;
-}
-
-.placeholder-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.info-header {
-  margin-bottom: 3rem;
-}
-
-.nodes-list {
+.contact-info-section ul {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  margin-bottom: 4rem;
-}
-
-.network-map {
-  position: relative;
-  height: 250px;
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  overflow: hidden;
-}
-
-.map-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(245, 158, 11, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245, 158, 11, 0.05) 1px, transparent 1px);
-  background-size: 30px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.map-point {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--primary);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-}
-
-.map-point span {
-  width: 10px;
-  height: 10px;
-  background: var(--primary);
-  border-radius: 50%;
-  box-shadow: 0 0 10px var(--primary);
-}
-
-@media (max-width: 1100px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 4rem;
-  }
 }
 </style>
