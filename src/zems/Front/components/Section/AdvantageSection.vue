@@ -1,7 +1,7 @@
 <script setup>
+import SectionHeader from '@/components/Widget/SectionHeader.vue'
 import BaseImage from '@/components/Elements/BaseImage.vue'
 import ListItem from '@/components/Elements/ListItem.vue'
-import SectionHeader from '@/components/Widget/SectionHeader.vue'
 const advantages = [
   {
     title: 'Elite Training',

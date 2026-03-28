@@ -1,9 +1,9 @@
 <script setup>
-import BaseImage from '../Elements/BaseImage.vue'
-import BaseParagraph from '../Elements/BaseParagraph.vue'
-import BaseTitle from '../Elements/BaseTitle.vue'
-import ListItem from '../Elements/ListItem.vue'
-import SectionHeader from '../Widget/SectionHeader.vue'
+import SectionHeader from '@/components/Widget/SectionHeader.vue'
+import BaseImage from '@/components/Elements/BaseImage.vue'
+import BaseParagraph from '@/components/Elements/BaseParagraph.vue'
+import BaseTitle from '@/components/Elements/BaseTitle.vue'
+import ListItem from '@/components/Elements/ListItem.vue'
 </script>
 
 <template>
@@ -11,7 +11,11 @@ import SectionHeader from '../Widget/SectionHeader.vue'
     <div class="container">
       <div class="medium-2 gap-2">
         <div class="content">
-          <SectionHeader class="mb-2" title="Enforcing Global Security Excellence" subTitle="" />
+          <SectionHeader
+            class="mb-2"
+            title="Enforcing Global Security Excellence"
+            subTitle="Our Mission"
+          />
           <BaseParagraph>
             We provide peace of mind through precision security and intelligent protection.
           </BaseParagraph>

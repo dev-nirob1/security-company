@@ -1,11 +1,8 @@
 <script setup>
-// import MissionSection from '@/components/Section/MissionSection.vue'
-// import AdvantageSection from '@/components/Section/AdvantageSection.vue'
-// import LeadershipSection from '@/components/Section/LeadershipSection.vue'
-// import CtaSection from '@/components/Section/CtaSection.vue'
 import PageHero from '@/components/Widget/PageHero.vue'
 import CtaSection from '../components/Section/CtaSection.vue'
-import MissionSection from '@/components/Section/MissionSection.vue'
+import MissionSection from '../components/Section/MissionSection.vue'
+import AdvantageSection from '../components/Section/AdvantageSection.vue'
 </script>
 
 <template>
@@ -18,11 +15,11 @@ import MissionSection from '@/components/Section/MissionSection.vue'
 
     <MissionSection />
 
-    <!-- <div class="advan">
+    <div class="bg-secondary">
       <AdvantageSection />
     </div>
 
-    <LeadershipSection /> -->
+    <LeadershipSection />
 
     <CtaSection />
   </div>
