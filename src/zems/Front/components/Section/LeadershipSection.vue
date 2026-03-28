@@ -1,6 +1,6 @@
 <script setup>
-import SectionHeader from '@/Widget/SectionHeader.vue'
-import TeamCard from '@/Widget/TeamCard.vue'
+import SectionHeader from '@/components/Widget/SectionHeader.vue'
+import TeamCard from '../Widget/TeamCard.vue'
 
 const team = [
   {
@@ -25,12 +25,12 @@ const team = [
 </script>
 
 <template>
-  <section class="leadership-section section-padding">
+  <section class="leadership-section">
     <div class="container">
-      <SectionHeader subtitle="The Command Chain" title="Elite Leadership Team" />
+      <SectionHeader class="mb-3" subTitle="The Command Chain" title="Elite Leadership Team" />
 
-      <div class="team-grid">
-        <TeamCard v-for="member in team" :key="member.name" v-bind="member" />
+      <div class="medium-2 large-3 gap-2">
+        <TeamCard v-for="(member, i) in team" :key="i" :member="member" />
       </div>
     </div>
   </section>
@@ -38,25 +38,6 @@ const team = [
 
 <style scoped>
 .leadership-section {
-  /* background-color: var(--secondary); */
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-  margin-top: 4rem;
-}
-
-@media (max-width: 991px) {
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .team-grid {
-    grid-template-columns: 1fr;
-  }
+  padding: var(--section-padding) 0;
 }
 </style>

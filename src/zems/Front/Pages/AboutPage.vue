@@ -3,6 +3,7 @@ import PageHero from '@/components/Widget/PageHero.vue'
 import CtaSection from '../components/Section/CtaSection.vue'
 import MissionSection from '../components/Section/MissionSection.vue'
 import AdvantageSection from '../components/Section/AdvantageSection.vue'
+import LeadershipSection from '../components/Section/LeadershipSection.vue'
 </script>
 
 <template>
@@ -25,8 +26,4 @@ import AdvantageSection from '../components/Section/AdvantageSection.vue'
   </div>
 </template>
 
-<style scoped>
-.advan {
-  background-color: var(--secondary) !important;
-}
-</style>
+<style scoped></style>
