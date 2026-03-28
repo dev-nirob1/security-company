@@ -18,9 +18,9 @@ defineProps({
 .breadcrumb {
   display: flex;
   gap: 1rem;
-  font-size: 1.15rem;
   color: var(--text-secondary);
   font-weight: 600;
+  text-transform: uppercase;
 }
 .breadcrumb li:last-child {
   color: var(--primary-color);

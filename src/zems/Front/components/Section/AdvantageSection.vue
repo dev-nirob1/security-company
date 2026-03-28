@@ -86,6 +86,9 @@ const advantages = [
   font-size: 0.95rem;
   color: var(--text-secondary);
 }
+.advantage-section .image {
+  padding: 1.5rem;
+}
 .advantage-section .image img {
   clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
   aspect-ratio: 1/1;
@@ -93,8 +96,8 @@ const advantages = [
 .advantage-section .image::before {
   position: absolute;
   content: '';
-  top: -20px;
-  left: -20px;
+  top: 0;
+  left: 0;
   width: 60px;
   height: 60px;
   border-top: 2px solid var(--primary-color);

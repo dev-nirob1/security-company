@@ -11,10 +11,10 @@ defineProps({
   <div class="team-card">
     <div class="image">
       <BaseImage :image="member.image" :alt="member.name" />
-      <div class="status-badge">
+      <!-- <div class="status-badge">
         <span class="pulse"></span>
         ON DUTY
-      </div>
+      </div> -->
     </div>
 
     <div class="info">

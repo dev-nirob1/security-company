@@ -16,7 +16,6 @@ const isSubmitted = ref(false)
 
 const handleSubmit = () => {
   isSubmitting.value = true
-  // Simulate API call
   setTimeout(() => {
     isSubmitting.value = false
     isSubmitted.value = true

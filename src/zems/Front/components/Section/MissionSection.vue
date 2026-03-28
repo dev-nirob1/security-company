@@ -72,10 +72,10 @@ import ListItem from '@/components/Elements/ListItem.vue'
 }
 .mission-section .image {
   border: 2px solid var(--border);
+  padding: 1.5rem;
 }
 
 .mission-section .image img {
-  width: 90%;
   clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
 }
 </style>

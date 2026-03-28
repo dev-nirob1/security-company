@@ -48,19 +48,6 @@ import HeroTitle from '@/components/Elements/HeroTitle.vue'
   text-align: center;
 }
 
-.badge {
-  display: inline-block;
-  padding: 0.4rem 1rem;
-  background: rgba(245, 158, 11, 0.1);
-  color: var(--primary-color);
-  border: 1px solid rgba(245, 158, 11, 0.25);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 1.5rem;
-}
-
 .accent {
   color: var(--primary-color);
 }
